@@ -1,0 +1,15 @@
+# test
+pytest==6.1.2
+pytest-cov
+Faker==3.0.0
+
+# config
+pydantic==1.7.2
+python-dotenv==0.15.0
+
+# app
+Flask==1.1.1
+redis==3.4.1
+shortuuid==1.0.1
+requests
+gunicorn==19.9.0

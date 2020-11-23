@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  app:
+    build: "."
+    env_file: ${ENV_FILE:-.env}
+    ports:
+      - "${FLASK_PORT}:${FLASK_PORT}"
+    command: gunicorn -w 4 -b :${FLASK_PORT} "app:create_app()"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis
+    expose:
+      - 6379
