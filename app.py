@@ -1,5 +1,5 @@
 from flask import Flask
-from views import ui, api_v1_url
+from views import error_handler, ui, api_v1_url
 from settings import settings
 
 
@@ -9,6 +9,9 @@ def create_app():
     # Setting endpoints
     app.register_blueprint(ui)
     app.register_blueprint(api_v1_url, url_prefix='/v1')
+
+    # Setting error handler
+    app.register_blueprint(error_handler)
 
     return app
 
