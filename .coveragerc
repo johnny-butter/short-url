@@ -1,0 +1,7 @@
+[run]
+include =
+    models.py
+    views/api/*
+
+omit =
+    */__init__.py
